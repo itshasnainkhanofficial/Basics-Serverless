@@ -1,0 +1,11 @@
+# GET https://p50t7rlwwa.execute-api.us-east-1.amazonaws.com/dev/
+
+# POST https://p50t7rlwwa.execute-api.us-east-1.amazonaws.com/dev/
+# content-type: application/json
+
+# {
+#     "todo": "hello"
+# }
+
+
+GET https://p50t7rlwwa.execute-api.us-east-1.amazonaws.com/dev/todos

@@ -1,5 +1,5 @@
 const {v4} = require("uuid")
-const AWS = requre("aws-sdk")
+const AWS = require("aws-sdk")
 
 
 const addTodo = async (event) => {
@@ -20,7 +20,7 @@ const addTodo = async (event) => {
 
     await dynamodb.put({
         TableName: "TodoTable",
-        newTodo
+        Item: newTodo
     }).promise()
 
     return {

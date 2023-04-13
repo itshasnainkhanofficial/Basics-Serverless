@@ -1,14 +1,14 @@
-const AWS = requre("aws-sdk")
+const AWS = require("aws-sdk")
 
 
 const fetchTodo = async (event) => {
     const dynamodb = new AWS.DynamoDB.DocumentClient()
 
-    let todo
+    let todos
     try {
         const results = await dynamodb.scan({TableName: "TodoTable"}).promise()
 
-        todos = results.items
+        todos = results.Items
 
     } catch (error) {
         console.log(error)
